@@ -63,6 +63,16 @@ function createLinkedList() {
       prev.nextNode = null;
       return cur;
     },
+    contains(value) {
+      let tmp = head;
+      while (tmp !== null) {
+        if (tmp.value === value) {
+          return true;
+        }
+        tmp = tmp.nextNode;
+      }
+      return false;
+    },
   };
 }
 

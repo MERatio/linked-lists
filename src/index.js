@@ -12,3 +12,4 @@ console.log("tail", linkedList.getTail());
 console.log("at index 1", linkedList.at(1));
 console.log("pop", linkedList.pop());
 console.log("tail", linkedList.getTail());
+console.log("contains b?", linkedList.contains("b"));
