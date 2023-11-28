@@ -8,11 +8,11 @@ function createLinkedList() {
     append(value) {
       if (head === null) {
         this.prepend(value);
-      } else {
-        let tail = this.getTail();
-        tail.nextNode = createNode(value, null);
-        size++;
+        return;
       }
+      let tail = this.getTail();
+      tail.nextNode = createNode(value, null);
+      size++;
     },
     prepend(value) {
       head = createNode(value, head);
@@ -49,19 +49,20 @@ function createLinkedList() {
     pop() {
       if (head === null) {
         return;
-      } else if (head.nextNode === null) {
+      }
+      if (head.nextNode === null) {
         head = null;
         size--;
-      } else {
-        let prev = null;
-        let cur = head;
-        while (cur.nextNode !== null) {
-          prev = cur;
-          cur = cur.nextNode;
-        }
-        prev.nextNode = null;
-        size--;
+        return;
       }
+      let prev = null;
+      let cur = head;
+      while (cur.nextNode !== null) {
+        prev = cur;
+        cur = cur.nextNode;
+      }
+      prev.nextNode = null;
+      size--;
     },
     contains(value) {
       let tmp = head;
@@ -98,19 +99,19 @@ function createLinkedList() {
     insertAt(value, index) {
       if (index === 0) {
         this.prepend(value);
-      } else {
-        let prev = null;
-        let cur = head;
-        let curIndex = 0;
-        while (cur !== null && curIndex !== index) {
-          prev = cur;
-          cur = cur.nextNode;
-          curIndex++;
-        }
-        if (curIndex === index) {
-          prev.nextNode = createNode(value, cur);
-          size++;
-        }
+        return;
+      }
+      let prev = null;
+      let cur = head;
+      let curIndex = 0;
+      while (cur !== null && curIndex !== index) {
+        prev = cur;
+        cur = cur.nextNode;
+        curIndex++;
+      }
+      if (curIndex === index) {
+        prev.nextNode = createNode(value, cur);
+        size++;
       }
     },
     removeAt(index) {
