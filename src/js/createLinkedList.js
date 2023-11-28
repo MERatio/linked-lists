@@ -52,6 +52,7 @@ function createLinkedList() {
       } else if (head.nextNode === null) {
         let tmp = head;
         head = null;
+        size--;
         return tmp;
       }
       let prev = null;
@@ -61,6 +62,7 @@ function createLinkedList() {
         cur = cur.nextNode;
       }
       prev.nextNode = null;
+      size--;
       return cur;
     },
     contains(value) {

@@ -13,5 +13,6 @@ console.log("tail:", linkedList.getTail());
 console.log("at index 1:", linkedList.at(1));
 console.log("pop:", linkedList.pop());
 console.log("toString:", linkedList.toString());
+console.log("size:", linkedList.getSize());
 console.log("contains b?:", linkedList.contains("b"));
 console.log("find index of b:", linkedList.find("b"));
