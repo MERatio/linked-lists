@@ -95,6 +95,24 @@ function createLinkedList() {
       str += "null";
       return str;
     },
+    insertAt(value, index) {
+      if (index === 0) {
+        this.prepend(value);
+      } else {
+        let prev = null;
+        let cur = head;
+        let curIndex = 0;
+        while (cur !== null && curIndex !== index) {
+          prev = cur;
+          cur = cur.nextNode;
+          curIndex++;
+        }
+        if (curIndex === index) {
+          prev.nextNode = createNode(value, cur);
+          size++;
+        }
+      }
+    },
   };
 }
 

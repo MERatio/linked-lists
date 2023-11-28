@@ -16,3 +16,6 @@ console.log("toString:", linkedList.toString());
 console.log("size:", linkedList.getSize());
 console.log("contains b?:", linkedList.contains("b"));
 console.log("find index of b:", linkedList.find("b"));
+console.log("insert c at index 2:", linkedList.insertAt("c", 2));
+console.log("toString:", linkedList.toString());
+console.log("size:", linkedList.getSize());
