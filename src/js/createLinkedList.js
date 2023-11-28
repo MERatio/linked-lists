@@ -9,11 +9,8 @@ function createLinkedList() {
       if (head === null) {
         this.prepend(value);
       } else {
-        let tmp = head;
-        while (tmp.nextNode !== null) {
-          tmp = tmp.nextNode;
-        }
-        tmp.nextNode = createNode(value, null);
+        let tail = this.getTail();
+        tail.nextNode = createNode(value, null);
         size++;
       }
     },
