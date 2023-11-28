@@ -46,6 +46,23 @@ function createLinkedList() {
       }
       return tmp;
     },
+    pop() {
+      if (head === null) {
+        return null;
+      } else if (head.nextNode === null) {
+        let tmp = head;
+        head = null;
+        return tmp;
+      }
+      let prev = null;
+      let cur = head;
+      while (cur.nextNode !== null) {
+        prev = cur;
+        cur = cur.nextNode;
+      }
+      prev.nextNode = null;
+      return cur;
+    },
   };
 }
 
