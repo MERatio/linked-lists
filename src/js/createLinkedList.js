@@ -25,6 +25,9 @@ function createLinkedList() {
       return head;
     },
     getTail() {
+      if (head === null) {
+        return null;
+      }
       let tmp = head;
       while (tmp.nextNode !== null) {
         tmp = tmp.nextNode;
