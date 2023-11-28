@@ -34,6 +34,18 @@ function createLinkedList() {
       }
       return tmp;
     },
+    at(index) {
+      let tmp = head;
+      let curIndex = 0;
+      while (tmp !== null && curIndex !== index) {
+        tmp = tmp.nextNode;
+        curIndex++;
+      }
+      if (tmp === null) {
+        return null;
+      }
+      return tmp;
+    },
   };
 }
 
