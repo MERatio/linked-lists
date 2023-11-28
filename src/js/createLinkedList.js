@@ -85,6 +85,16 @@ function createLinkedList() {
       }
       return null;
     },
+    toString() {
+      let str = "";
+      let tmp = head;
+      while (tmp !== null) {
+        str += `( ${tmp.value} ) -> `;
+        tmp = tmp.nextNode;
+      }
+      str += "null";
+      return str;
+    },
   };
 }
 
