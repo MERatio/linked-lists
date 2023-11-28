@@ -14,6 +14,8 @@ Singly Linked List implemented in JavaScript.
 - `contains(value)` returns true if the passed in value is in the list and otherwise returns false.
 - `find(value)` returns the index of the node containing value, or null if not found.
 - `toString` represents the linked list objects as strings. The format should is: ( value ) -> ( value ) -> ( value ) -> null.
+- `insertAt(value, index)` inserts a new node with the provided value at the given index.
+- `removeAt(index)` removes the node at the given index.
 
 ## Usage/Examples
 
