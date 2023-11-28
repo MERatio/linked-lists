@@ -1,6 +1,7 @@
 import createLinkedList from "./js/createLinkedList";
 
 const linkedList = createLinkedList();
+window.linkedList = linkedList;
 
 linkedList.append("b");
 linkedList.prepend("a");
