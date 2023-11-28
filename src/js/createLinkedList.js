@@ -27,6 +27,13 @@ function createLinkedList() {
     getHead() {
       return head;
     },
+    getTail() {
+      let tmp = head;
+      while (tmp.nextNode !== null) {
+        tmp = tmp.nextNode;
+      }
+      return tmp;
+    },
   };
 }
 

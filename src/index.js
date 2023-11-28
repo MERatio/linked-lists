@@ -8,3 +8,4 @@ linkedList.append("c");
 
 console.log(linkedList.getSize());
 console.log(linkedList.getHead());
+console.log(linkedList.getTail());
