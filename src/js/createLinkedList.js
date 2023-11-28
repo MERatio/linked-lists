@@ -73,6 +73,18 @@ function createLinkedList() {
       }
       return false;
     },
+    find(value) {
+      let tmp = head;
+      let curIndex = 0;
+      while (tmp !== null) {
+        if (tmp.value === value) {
+          return curIndex;
+        }
+        tmp = tmp.nextNode;
+        curIndex++;
+      }
+      return null;
+    },
   };
 }
 
