@@ -48,22 +48,20 @@ function createLinkedList() {
     },
     pop() {
       if (head === null) {
-        return null;
+        return;
       } else if (head.nextNode === null) {
-        let tmp = head;
         head = null;
         size--;
-        return tmp;
+      } else {
+        let prev = null;
+        let cur = head;
+        while (cur.nextNode !== null) {
+          prev = cur;
+          cur = cur.nextNode;
+        }
+        prev.nextNode = null;
+        size--;
       }
-      let prev = null;
-      let cur = head;
-      while (cur.nextNode !== null) {
-        prev = cur;
-        cur = cur.nextNode;
-      }
-      prev.nextNode = null;
-      size--;
-      return cur;
     },
     contains(value) {
       let tmp = head;
