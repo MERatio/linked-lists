@@ -113,6 +113,28 @@ function createLinkedList() {
         }
       }
     },
+    removeAt(index) {
+      if (head === null) {
+        return;
+      }
+      if (index === 0) {
+        head = head.nextNode;
+        size--;
+        return;
+      }
+      let prev = head;
+      let cur = head.nextNode;
+      let curIndex = 1;
+      while (cur !== null && curIndex !== index) {
+        prev = cur;
+        cur = cur.nextNode;
+        curIndex++;
+      }
+      if (cur !== null && curIndex === index) {
+        prev.nextNode = cur.nextNode;
+        size--;
+      }
+    },
   };
 }
 

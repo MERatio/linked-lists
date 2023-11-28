@@ -19,3 +19,6 @@ console.log("find index of b:", linkedList.find("b"));
 console.log("insert c at index 2:", linkedList.insertAt("c", 2));
 console.log("toString:", linkedList.toString());
 console.log("size:", linkedList.getSize());
+console.log("remove at index 1:", linkedList.removeAt(1));
+console.log("toString:", linkedList.toString());
+console.log("size:", linkedList.getSize());
