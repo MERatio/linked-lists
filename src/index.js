@@ -6,4 +6,5 @@ linkedList.append("b");
 linkedList.prepend("a");
 linkedList.append("c");
 
+console.log(linkedList.getSize());
 console.log(linkedList.getHead());

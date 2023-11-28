@@ -2,6 +2,7 @@ import createNode from "./createNode";
 
 function createLinkedList() {
   let head = null;
+  let size = 0;
 
   return {
     append(value) {
@@ -13,10 +14,15 @@ function createLinkedList() {
           tmp = tmp.nextNode;
         }
         tmp.nextNode = createNode(value, null);
+        size++;
       }
     },
     prepend(value) {
       head = createNode(value, head);
+      size++;
+    },
+    getSize() {
+      return size;
     },
     getHead() {
       return head;
