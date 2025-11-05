@@ -11,3 +11,4 @@ console.log(list.toString());
 console.log(list.size);
 console.log('Head', list.head);
 console.log('Tail', list.tail);
+console.log('At index 2', list.at(2));

@@ -70,6 +70,21 @@ class LinkedList {
       return cur;
     }
   }
+
+  // Returns the node at the given index.
+  at(index) {
+    if (this.#head === null || index < 0) {
+      return null;
+    }
+
+    let cur = this.#head;
+    let curIndex = 0;
+    while (cur !== null && curIndex !== index) {
+      cur = cur.nextNode;
+      curIndex++;
+    }
+    return cur;
+  }
 }
 
 export default LinkedList;
