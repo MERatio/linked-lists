@@ -56,6 +56,20 @@ class LinkedList {
   get head() {
     return this.#head;
   }
+
+  // Returns the last node in the list
+  // Should add a tail private field.
+  get tail() {
+    if (this.#head === null) {
+      return null;
+    } else {
+      let cur = this.#head;
+      while (cur.nextNode !== null) {
+        cur = cur.nextNode;
+      }
+      return cur;
+    }
+  }
 }
 
 export default LinkedList;

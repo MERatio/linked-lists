@@ -10,3 +10,4 @@ list.prepend('a');
 console.log(list.toString());
 console.log(list.size);
 console.log('Head', list.head);
+console.log('Tail', list.tail);
