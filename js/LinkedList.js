@@ -51,6 +51,11 @@ class LinkedList {
     }
     return nodeCount;
   }
+
+  // Returns the first node in the list.
+  get head() {
+    return this.#head;
+  }
 }
 
 export default LinkedList;
