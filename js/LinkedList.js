@@ -20,6 +20,12 @@ class LinkedList {
     }
   }
 
+  // Adds a new node containing value to the start of the list.
+  prepend(value) {
+    const newNode = new Node(value, this.head);
+    this.head = newNode;
+  }
+
   // Represents LinkedList objects as strings.
   // ( dog ) -> ( cat ) -> ( parrot ) -> ( hamster ) -> ( snake ) -> ( turtle ) -> null
   toString() {

@@ -2,11 +2,9 @@ import LinkedList from './LinkedList.js';
 
 const list = new LinkedList();
 
-list.append('dog');
-list.append('cat');
-list.append('parrot');
-list.append('hamster');
-list.append('snake');
-list.append('turtle');
+list.append('c');
+list.append('d');
+list.prepend('b');
+list.prepend('a');
 
 console.log(list.toString());
