@@ -29,16 +29,16 @@ class LinkedList {
   toString() {
     if (this.#head === null) {
       return 'null';
-    } else {
-      let str = '';
-      let cur = this.#head;
-      while (cur !== null) {
-        str += `( ${cur.value} ) -> `;
-        cur = cur.nextNode;
-      }
-      str += 'null';
-      return str;
     }
+
+    let str = '';
+    let cur = this.#head;
+    while (cur !== null) {
+      str += `( ${cur.value} ) -> `;
+      cur = cur.nextNode;
+    }
+    str += 'null';
+    return str;
   }
 
   // Returns the total number of nodes in the list.
@@ -62,13 +62,13 @@ class LinkedList {
   get tail() {
     if (this.#head === null) {
       return null;
-    } else {
-      let cur = this.#head;
-      while (cur.nextNode !== null) {
-        cur = cur.nextNode;
-      }
-      return cur;
     }
+
+    let cur = this.#head;
+    while (cur.nextNode !== null) {
+      cur = cur.nextNode;
+    }
+    return cur;
   }
 
   // Returns the node at the given index.
