@@ -8,3 +8,4 @@ list.prepend('b');
 list.prepend('a');
 
 console.log(list.toString());
+console.log(list.size);

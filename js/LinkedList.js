@@ -42,6 +42,17 @@ class LinkedList {
       return str;
     }
   }
+
+  // Returns the total number of nodes in the list.
+  get size() {
+    let nodeCount = 0;
+    let cur = this.head;
+    while (cur !== null) {
+      nodeCount++;
+      cur = cur.nextNode;
+    }
+    return nodeCount;
+  }
 }
 
 export default LinkedList;
