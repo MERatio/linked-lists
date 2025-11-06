@@ -85,6 +85,29 @@ class LinkedList {
     }
     return cur;
   }
+
+  // Removes the last node from the list, and returns its value.
+  pop() {
+    if (this.#head === null) {
+      return null;
+    }
+
+    // If only 1 node.
+    if (this.#head.nextNode === null) {
+      const value = this.#head.value;
+      this.#head = null;
+      return value;
+    }
+
+    let prev = null;
+    let cur = this.#head;
+    while (cur.nextNode !== null) {
+      prev = cur;
+      cur = cur.nextNode;
+    }
+    prev.nextNode = null;
+    return cur.value;
+  }
 }
 
 export default LinkedList;
