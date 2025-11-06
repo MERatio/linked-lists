@@ -15,3 +15,4 @@ console.log('At index 2', list.at(2));
 console.log('Pop', list.pop());
 console.log(list.toString());
 console.log('contains c?', list.contains('c'));
+console.log('indx of c?', list.find('c'));
