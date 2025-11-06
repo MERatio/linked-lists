@@ -158,6 +158,33 @@ class LinkedList {
       prev.nextNode = new Node(value, cur);
     }
   }
+
+  // Removes the node at the given index, and returns it.
+  removeAt(index) {
+    const listSize = this.size;
+    if (index < 0 || index >= listSize) {
+      throw new Error('Index out of bounds');
+    }
+
+    if (index === 0) {
+      const value = this.#head.value;
+      this.#head = this.#head.nextNode;
+      return value;
+    }
+
+    // Remove middle or last.
+    let prev = null;
+    let cur = this.#head;
+    let curIndex = 0;
+    while (curIndex !== index) {
+      prev = cur;
+      cur = cur.nextNode;
+      curIndex++;
+    }
+    const value = cur.value;
+    prev.nextNode = cur.nextNode;
+    return value;
+  }
 }
 
 export default LinkedList;

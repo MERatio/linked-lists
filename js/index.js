@@ -17,3 +17,4 @@ console.log(list.toString());
 console.log('contains d?', list.contains('d'));
 console.log('index of d?', list.find('d'));
 console.log(list.insertAt('c', 2), 'c inserted', list.toString());
+console.log(list.removeAt(2), 'c removed', list.toString());
