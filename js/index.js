@@ -14,3 +14,4 @@ console.log('Tail', list.tail);
 console.log('At index 2', list.at(2));
 console.log('Pop', list.pop());
 console.log(list.toString());
+console.log('contains c?', list.contains('c'));
