@@ -136,6 +136,28 @@ class LinkedList {
 
     return null;
   }
+
+  // Inserts a new node with the provided value at the given index.
+  insertAt(value, index) {
+    const listSize = this.size;
+    if (index < 0 || index > listSize) {
+      throw new Error('Index out of bounds');
+    } else if (index === 0) {
+      this.prepend(value);
+    } else if (index === listSize) {
+      this.append(value);
+    } else {
+      let prev = null;
+      let cur = this.#head;
+      let curIndex = 0;
+      while (curIndex !== index) {
+        prev = cur;
+        cur = cur.nextNode;
+        curIndex++;
+      }
+      prev.nextNode = new Node(value, cur);
+    }
+  }
 }
 
 export default LinkedList;
