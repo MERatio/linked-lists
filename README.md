@@ -20,3 +20,7 @@ Singly Linked List implemented in JavaScript.
 ## Acknowledgements
 
 - The project specification is based on [The Odin Project – Linked Lists Lesson](https://www.theodinproject.com/lessons/javascript-linked-lists).
+
+## Live Demo
+
+Check out the live version of the app here: [Live Demo Link](https://meratio.github.io/linked-lists).
